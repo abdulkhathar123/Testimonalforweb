@@ -7,8 +7,9 @@ type Props = {
 
 const TestimonialCard = ({ className }: Props) => {
   return (
-    <div className={`w-[900px] flex-shrink-0 bg-[#222329]  rounded-2xl shadow-lg flex h-[500px] border-3 border-dotted ${className}`}
-    style={{ borderColor: "rgba(255,255,255,0.3)" }}
+  <div
+  className={`max-w-[1500px] w-full bg-[#222329] rounded-2xl shadow-lg flex h-[500px] border-3 border-dotted ${className}`}
+  style={{ borderColor: "rgba(255,255,255,0.3)" }}
 >
       
       {/* LEFT SIDE - IMAGE */}
@@ -25,13 +26,20 @@ const TestimonialCard = ({ className }: Props) => {
       {/* RIGHT SIDE - TEXT */}
       <div className="w-2/3 p-10 flex flex-col justify-between ">
     <div className="flex justify-between items-center w-full">
-      <div >
-          <p className="font-semibold text-xl">Samantha</p>
-          <p className="text-sm text-gray-300">Lead UX/UI Designer</p>
-        </div>
+     <div>
+  {/* Name */}
+  <p className="text-white font-['Plus_Jakarta_Sans'] text-[20px] font-semibold leading-[34px]">
+    Samantha
+  </p>
+
+  {/* Role */}
+  <p className="text-[#CCCCCC] font-['Plus_Jakarta_Sans'] text-[18px] font-medium leading-[34px]">
+    Lead UX/UI Designer
+  </p>
+</div>
  <div className="flex justify-end ">
   <img
-  src="/Amazonsymbol.png"   // <-- Leading slash means from public root
+  src="Amazonsymbol.png"   // <-- Leading slash means from public root
   alt="Amazon"
   className="h-12"
 />
@@ -39,12 +47,35 @@ const TestimonialCard = ({ className }: Props) => {
   </div>
         {/* <p className="text-right text-sm  text-gray-400">— Amazon</p> */}
 
-        <p className="text-2xl p-3.5  text-gray-200 mt-10 flex-grow">
-          “I had a great learning experience with this institute. 
-          The trainers explained every concept in a simple and practical way 
-          which made it easy to understand. Even the toughest topic I feel more confident in my skills now.”
-        </p>
+       <p
+  className="mt-10 flex-grow"
+  style={{
+    fontFamily: '"Plus Jakarta Sans", sans-serif',
+    fontSize: "32px",
+    fontStyle: "normal",
+    fontWeight: 500,
+    lineHeight: "145%",
+  }}
+>
+ <span className="text-white">
+  I had a great learning experience with this institute.
+</span>
+  <span style={{ color: "#A6A6A6" }}>
+    The trainers explained every concept in a simple and practical way
+    which made it easy to understand. Even the toughest topic I feel
+    more confident in my skills now.
+  </span>
 
+
+</p>
+
+ <div className="flex justify-end mt-auto">
+  <img
+    src="ra.png"
+    alt="Amazon"
+    className="h-8"
+  />
+</div>
        
       </div>
     </div>

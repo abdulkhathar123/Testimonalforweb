@@ -25,7 +25,7 @@ const TestimonialSection = () => {
 </div>
 
       {/* 2. Second Row - Heading + Buttons */}
-      <div className="flex items-start justify-between gap-6">
+      <div className="flex flex-col lg:flex-row items-start justify-between gap-6">
         {/* Left side - heading */}
         <div>
          <h2 className="text-[42px] font-bold leading-normal"
@@ -45,7 +45,7 @@ const TestimonialSection = () => {
 </p> </div>
 
         {/* Right side - buttons */}
-        <div className="flex gap-4 mt-2">
+        <div className="flex flex-col sm:flex-row gap-4 mt-4 lg:mt-2">
         <button
   className="flex items-center gap-2 px-6 py-2 rounded-[12px] font-medium text-white shadow-md hover:opacity-90"
   style={{ background: "var(--Brand-color, #451AF5)" }}

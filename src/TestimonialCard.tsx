@@ -8,12 +8,12 @@ type Props = {
 const TestimonialCard = ({ className }: Props) => {
   return (
   <div
-  className={`max-w-[1500px] w-full bg-[#222329] rounded-2xl shadow-lg flex h-[500px] border-3 border-dotted ${className}`}
+  className={`max-w-[1500px] w-full bg-[#222329] rounded-2xl  shadow-lg flex flex-col lg:flex-row h-auto lg:h-[500px] border-3 border-dotted ${className}`}
   style={{ borderColor: "rgba(255,255,255,0.3)" }}
 >
       
       {/* LEFT SIDE - IMAGE */}
-      <div className="w-1/3 h-full flex items-center justify-center p-4">
+      <div className="w-full lg:w-1/3 h-[250px] lg:h-full flex items-center justify-center p-4">
   <div className="bg-white rounded-xl shadow-lg overflow-hidden w-full h-full">
     <img
       src="Testimage.png"

@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import ReviewCard from "./ReviewCard";
 import TestimonialCard from "./TestimonialCard";
 import YoutubeComments from "./YoutubeComments";
-
+import bgImage from '/bg_color.png';
 const TestimonialSection = () => {
   const [slide, setSlide] = useState(0);
   const reviewRef = useRef<HTMLDivElement | null>(null);
@@ -81,8 +81,11 @@ const TestimonialSection = () => {
 
       {/* Slide Section */}
       <div
-        className="relative w-full min-h-screen flex flex-col items-center transition-all duration-700 ease-in-out bg-[url('/bg_color.png')] bg-cover bg-center bg-no-repeat px-4 sm:px-6 lg:px-10"
-      >
+  style={{ backgroundImage: `url(${bgImage})`,
+width: "100%",    
+    backgroundSize: "cover",  }}
+  className="relative w-screen bg-cover bg-center bg-no-repeat px-4 sm:px-6 lg:px-10"
+>
         {slide < 3 ? (
           <div
             key={slide}

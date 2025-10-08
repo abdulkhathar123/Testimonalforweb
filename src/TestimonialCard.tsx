@@ -13,6 +13,7 @@ type Props = {
   youtubeTitle?: string;
   youtubeImage?: string;
   youtubeUrl?: string;
+   showYoutube?: boolean; 
 
 };
 
@@ -28,6 +29,7 @@ const TestimonialCard = ({
    youtubeTitle = "Watched playlist \n Learn DSA with code Thanish",
    youtubeImage = "youtube.png",
   youtubeUrl = "",
+  showYoutube = true,
 }: Props) => {
   return (
     <div
@@ -83,7 +85,7 @@ const TestimonialCard = ({
            <span className="text-white">{testimonialFirstLine} </span>
   <span style={{ color: "#A6A6A6" }}>{testimonial2nd}</span>
         </p>
-
+{showYoutube !== false && (
         <div
           onClick={() => window.open(youtubeUrl, "_blank")}
           className="flex items-center bg-[#222329] rounded-xl shadow-md cursor-pointer hover:scale-105 transition-all duration-300 mt-4"
@@ -137,7 +139,7 @@ const TestimonialCard = ({
           
         </div>
 
-
+)}
        
 
        <div className="flex items-center justify-between mt-3">

@@ -81,7 +81,7 @@ const TestimonialSection = () => {
 
       {/* Slide Section */}
       <div
-        className="relative w-full min-h-[70vh] flex flex-col items-center transition-all duration-700 ease-in-out bg-[url('bg_color.png')] bg-cover bg-center bg-no-repeat px-4 sm:px-6 lg:px-10"
+        className="relative w-full min-h-screen flex flex-col items-center transition-all duration-700 ease-in-out bg-[url('/bg_color.png')] bg-cover bg-center bg-no-repeat px-4 sm:px-6 lg:px-10"
       >
         {slide < 3 ? (
           <div
@@ -116,7 +116,7 @@ const TestimonialSection = () => {
             {slide === 2 && (
               <>
                 <div className="w-full lg:w-[80%] xl:w-[90%]">
-                  <TestimonialCard  />
+                  <TestimonialCard showYoutube={false} />
                 </div>
                 <div className="w-full sm:w-[80%] md:w-[60%] lg:w-[30%]">
                   <YoutubeComments title="LinkedIn" color="text-blue-500" icon="linkedin.png" />
